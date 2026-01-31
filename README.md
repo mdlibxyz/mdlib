@@ -27,12 +27,10 @@ This repository contains community-contributed configurations for various AI cod
 ```
 ├── README.md
 ├── subagents/
-│   ├── code-review-assistant.md
-│   ├── documentation-generator.md
+│   ├── refactorer.md
 │   └── ...
 └── skills/
-    ├── react-component-builder.md
-    ├── sql-query-optimizer.md
+    ├── component-class-extraction.md
     └── ...
 ```
 
@@ -56,12 +54,12 @@ Every `.md` file must include YAML frontmatter:
 
 ```yaml
 ---
-name: My Awesome Subagent
+name: My Subagent
 description: A brief description (1-2 sentences)
-type: subagent  # or "skill"
-platform: cursor  # cursor, openclaw, windsurf, aider, continue, cody, copilot, other
+type: # subagent or skill
+platform: # cursor, openclaw, windsurf, aider, continue, cody, copilot, other
 category: Development
-recommendedLLMs:  # optional
+recommendedLLMs:  # optional `claude-3-opus`, `claude-3-sonnet`, `claude-3-haiku`, `claude-3.5-sonnet`, `other`
   - claude-3.5-sonnet
   - gpt-4o
 tags:  # optional
@@ -75,24 +73,6 @@ version: 1.0.0  # optional
 
 Detailed documentation, usage examples, and configuration...
 ```
-
-### Required Fields
-
-| Field | Description |
-|-------|-------------|
-| `name` | Display name |
-| `description` | Brief description (shown on cards) |
-| `type` | `subagent` or `skill` |
-| `platform` | Target platform |
-| `category` | Category for filtering |
-
-### Supported LLMs
-
-Use this format for `recommendedLLMs`, examples:
-- `gpt-4`, `gpt-4o`, `gpt-4-turbo`, `gpt-3.5-turbo`
-- `claude-3-opus`, `claude-3-sonnet`, `claude-3-haiku`, `claude-3.5-sonnet`
-- `gemini-pro`, `gemini-ultra`
-- `llama-3`, `mistral`
 
 ### How to Contribute
 
